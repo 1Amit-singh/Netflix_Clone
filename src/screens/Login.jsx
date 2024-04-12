@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import netflixLogo from "../assets/NetflixLogo.svg";
 import languageIcon from "../assets/LanguageIcon.svg";
 import { IoLanguage } from "react-icons/io5";
 import EmailForm from "../components/EmailForm";
+import Footer from "../components/Footer";
 
 const Login = () => {
+  const [display, setDisplay] = useState({});
+
+  const handleToggle = (id) => {
+    console.log("clicked");
+    setDisplay((prevDisplay) => ({
+      // ...prevDisplay,
+      [id]: !prevDisplay[id],
+    }));
+  };
+
   return (
     <>
       {/* First Section */}
@@ -70,7 +81,7 @@ const Login = () => {
 
       {/* Second section */}
 
-      <div className="text-white bg-black flex w-full justify-between items-center px-44 py-24 gap-2 border-gray-700 border-y-8">
+      <div className="text-white bg-black flex flex-wrap-reverse w-full justify-between items-center px-[13%] py-24 gap-2 border-gray-700 border-y-8">
         <div className="w-1/2">
           <h1 className="text-5xl font-NetflixSansBlack mb-8">
             Enjoy on your TV
@@ -80,21 +91,24 @@ const Login = () => {
             players and more.
           </p>
         </div>
-        <div className="w-1/2 h-80 relative -translate-y-[18%]">
+        <div className="w-96 h-80 relative overflow-hidden">
           <img
             alt=""
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
             data-uia="nmhp-card-animation-asset-image"
-            className="absolute z-10 scale-105"
+            className="absolute bottom-0 z-10 scale-105"
           />
-          <div data-uia="nmhp-card-animation-asset-motion" className="absolute">
+          <div
+            data-uia="nmhp-card-animation-asset-motion"
+            className="absolute bottom-3 left-8 min-w-full"
+          >
             <video
               data-uia="nmhp-card-animation-asset-video"
               autoPlay
               playsInline
               muted=""
               loop=""
-              className="pt-16 pl-[3.80rem]"
+              className="h-full w-full"
             >
               <source
                 src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
@@ -113,8 +127,8 @@ const Login = () => {
 
       {/* Third section */}
 
-      <div className="text-white bg-black flex w-full justify-between items-center px-44 py-24 gap-14 border-gray-700 border-b-8">
-        <div>
+      <div className="text-white bg-black flex flex-wrap w-full justify-between items-center px-[13%] py-24 gap-4 border-gray-700 border-b-8">
+        <div className="w-[27rem] bg-white">
           <img
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
             className="scale-110"
@@ -122,7 +136,7 @@ const Login = () => {
           />
         </div>
 
-        <div className="">
+        <div className="min-w-1/2 basis-1/2">
           <h1 className="text-5xl font-NetflixSansBlack mb-8">
             Download your shows to watch offline
           </h1>
@@ -134,13 +148,14 @@ const Login = () => {
 
       {/* Fourth section */}
 
-      <div className="text-white bg-black flex w-full justify-between items-center px-44 py-24 gap-14 border-gray-700 border-b-8">
+      <div className="text-white bg-black flex w-full justify-between items-center px-[13%] py-24 gap-14 border-gray-700 border-b-8">
         <div className="">
           <h1 className="text-5xl font-NetflixSansBlack mb-8">
-          Watch everywhere
+            Watch everywhere
           </h1>
           <p className="text-2xl">
-          Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.
+            Stream unlimited movies and TV shows on your phone, tablet, laptop,
+            and TV.
           </p>
         </div>
 
@@ -151,30 +166,178 @@ const Login = () => {
             alt=""
           />
           <div>
-          <video data-uia="nmhp-card-animation-asset-video" autoPlay="" playsinline="" muted="" loop=""><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" type="video/mp4" /></video>
+            <video
+              data-uia="nmhp-card-animation-asset-video"
+              autoPlay=""
+              playsinline=""
+              muted=""
+              loop=""
+            >
+              <source
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
-
       </div>
-
 
       {/* Fifth section */}
 
-      <div className="text-white bg-black flex w-full justify-between items-center px-44 py-24 gap-14 border-gray-700 border-b-8">
-        <div className="relative w-1/2 h-64">
-          <img src="https://occ-0-4875-2186.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d" alt="" />
+      <div className="text-white bg-black flex w-full justify-between items-center px-[13%] py-24 gap-14 border-gray-700 border-b-8">
+        <div className="w-1/2 h-80 ">
+          <img
+            src="https://occ-0-4875-2186.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+            className="object-cover h-96"
+            alt=""
+          />
         </div>
 
-        <div className=" w-2/3">
+        <div className=" w-1/2">
           <h1 className="text-5xl font-NetflixSansBlack mb-8">
-          Create profiles for kids
+            Create profiles for kids
           </h1>
           <p className="text-2xl">
-          Send children on adventures with their favourite characters in a space made just for them—free with your membership.
+            Send children on adventures with their favourite characters in a
+            space made just for them—free with your membership.
           </p>
         </div>
+      </div>
+      {/* Frequently Asked Section  */}
 
-
+      <div className="">
+        <h1 className="text-center text-white md:text-6xl text-3xl md:py-12 py-8  md:font-NetflixSansBlack font-bold">
+          Frequently Asked Questions
+        </h1>
+        <ul className="flex flex-col gap-2 mx-auto w-[80%] min-w-[450px] text-white font-NetflixSansBold md:text-2xl text-xl md:mb-10 mb-5">
+          <li className="">
+            <button
+              className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
+              onClick={() => handleToggle("1")}
+            >
+              <h1>What is Netflix?</h1>
+              <div>+</div>
+            </button>
+            <div
+              className={`${
+                display["1"] ? "block" : "hidden"
+              } bg-netflixGray mt-1 md:py-8 md:px-6 p-4`}
+            >
+              Netflix is a streaming service that offers a wide variety of
+              award-winning TV shows, movies, anime, documentaries and more – on
+              thousands of internet-connected devices.
+              <br />
+              <br /> You can watch as much as you want, whenever you want,
+              without a single ad – all for one low monthly price. There's
+              always something new to discover, and new TV shows and movies are
+              added every week!
+            </div>
+          </li>
+          <li className="">
+            <button
+              className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
+              onClick={() => handleToggle("2")}
+            >
+              <h1>How much does Netflix cost?</h1>
+              <div>+</div>
+            </button>
+            <div
+              className={`${
+                display["2"] ? "block" : "hidden"
+              } bg-netflixGray mt-1 md:py-8 md:px-6 p-4`}
+            >
+              Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+              streaming device, all for one fixed monthly fee. Plans range from
+              ₹649 to ₹149 a month. No extra costs, no contracts.
+            </div>
+          </li>
+          <li className="">
+            <button
+              className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
+              onClick={() => handleToggle("3")}
+            >
+              <h1>Where can I watch?</h1>
+              <div>+</div>
+            </button>
+            <div
+              className={`${
+                display["3"] ? "block" : "hidden"
+              } bg-netflixGray mt-1 md:py-8 md:px-6 p-4`}
+            >
+              Watch anywhere, anytime. Sign in with your Netflix account to
+              watch instantly on the web at netflix.com from your personal
+              computer or on any internet-connected device that offers the
+              Netflix app, including smart TVs, smartphones, tablets, streaming
+              media players and game consoles.
+              <br />
+              <br /> You can also download your favourite shows with the iOS,
+              Android, or Windows 10 app. Use downloads to watch while you're on
+              the go and without an internet connection. Take Netflix with you
+              anywhere.
+            </div>
+          </li>
+          <li className="">
+            <button
+              className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
+              onClick={() => handleToggle("4")}
+            >
+              <h1>How do I cancel?</h1>
+              <div>+</div>
+            </button>
+            <div
+              className={`${
+                display["4"] ? "block" : "hidden"
+              } bg-netflixGray mt-1 md:py-8 md:px-6 p-4`}
+            >
+              Netflix is flexible. There are no annoying contracts and no
+              commitments. You can easily cancel your account online in two
+              clicks. There are no cancellation fees – start or stop your
+              account anytime.
+            </div>
+          </li>
+          <li className="">
+            <button
+              className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
+              onClick={() => handleToggle("5")}
+            >
+              <h1>What can I watch in Netflix?</h1>
+              <div>+</div>
+            </button>
+            <div
+              className={`${
+                display["5"] ? "block" : "hidden"
+              } bg-netflixGray mt-1 md:py-8 md:px-6 p-4`}
+            >
+              Netflix has an extensive library of feature films, documentaries,
+              TV shows, anime, award-winning Netflix originals, and more. Watch
+              as much as you want, anytime you want.
+            </div>
+          </li>
+          <li className="">
+            <button
+              className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
+              onClick={() => handleToggle("6")}
+            >
+              <h1>Is Netflix good for Kids?</h1>
+              <div>+</div>
+            </button>
+            <div
+              className={`${
+                display["6"] ? "block" : "hidden"
+              } bg-netflixGray mt-1 md:py-8 md:px-6 p-4`}
+            >
+              The Netflix Kids experience is included in your membership to give
+              parents control while kids enjoy family-friendly TV shows and
+              films in their own space.
+              <br />
+              <br /> Kids profiles come with PIN-protected parental controls
+              that let you restrict the maturity rating of content kids can
+              watch and block specific titles you don’t want kids to see.
+            </div>
+          </li>
+        </ul>
+        <EmailForm />
+        <Footer />
       </div>
     </>
   );

@@ -3,8 +3,8 @@ import { IoLanguage } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <div className="md:w-[80%] min-w-[405px] mx-auto">
-      <div className="text-netflexLightGray md:mb-6 mb-4">
+    <div className="  mx-auto py-10 px-[13%]">
+      <div className="text-netflexLightGray md:mb-6 mb-8">
         <p>
           Questions? Call{" "}
           <a href="" className="underline">
@@ -12,15 +12,15 @@ const Footer = () => {
           </a>
         </p>
       </div>
-      <div className="text-netflexLightGray flex flex-row justify-between">
+      <div className="text-netflexLightGray md:flex md:flex-row columns-2 justify-between">
         <div className="flex flex-col md:gap-5 gap-3">
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             FAQ
           </a>
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             Investor Relations
           </a>
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             Privacy
           </a>
           <a href="" className="underline">
@@ -28,13 +28,13 @@ const Footer = () => {
           </a>
         </div>
         <div className="flex flex-col md:gap-5 gap-3">
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             Help Center
           </a>
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             Jobs
           </a>
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             Cookie Preferences
           </a>
           <a href="" className="underline">
@@ -42,13 +42,13 @@ const Footer = () => {
           </a>
         </div>
         <div className="flex flex-col md:gap-5 gap-3">
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             Account
           </a>
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             Ways to Watch
           </a>
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             Corporate Information
           </a>
           <a href="" className="underline">
@@ -56,10 +56,10 @@ const Footer = () => {
           </a>
         </div>
         <div className="flex flex-col md:gap-5 gap-3">
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             Media Center
           </a>
-          <a className="underline" href="">
+          <a className="underline md:text-base text-sm" href="">
             Terms of Use
           </a>
           <a href="" className="underline">

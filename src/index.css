@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'NetflixSansRegular';
-    src: url('fonts/NetflixSansRegular.ttf') format('truetype');
-    /* Add additional font formats if available */
-    font-weight: normal;
-    font-style: normal;
+  font-family: "NetflixSansRegular";
+  src: url("fonts/NetflixSansRegular.ttf") format("truetype");
+  /* Add additional font formats if available */
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-body{
-    font-family: "NetflixSansRegular", sans-serif;
+body {
+  font-family: "NetflixSansRegular", sans-serif;
+  overflow-x: hidden;
 }

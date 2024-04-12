@@ -39,10 +39,10 @@ const Login = () => {
 
         {/* Main Nav Starting */}
 
-        <div className="absolute z-20 w-full flex justify-between py-6 px-40">
+        <div className="absolute z-20 w-full flex justify-between py-6 md:px-[13%] px-[3%]">
           {/* Left Side  */}
 
-          <img src={netflixLogo} alt="" className="shadow-2xl w-40" />
+          <img src={netflixLogo} alt="" className="shadow-2xl cd:w-40 w-24" />
 
           {/* Right Side */}
 
@@ -67,11 +67,11 @@ const Login = () => {
 
         {/* Hero Text Container  */}
 
-        <div className=" w-full h-screen absolute z-30 text-white flex flex-col items-center justify-center">
-          <h1 className="text-5xl w-2/3 text-center leading-[3.8rem] font-NetflixSansBlack">
+        <div className=" w-full h-screen absolute z-30 text-white flex flex-col items-center justify-center px-[5%]">
+          <h1 className="md:text-5xl text-4xl md:w-2/3 w-full text-center md:leading-[3.8rem] font-NetflixSansBlack">
             Enjoy big movies, hit series and more from ₹ 149.
           </h1>
-          <h3 className="font-NetflixSansBold text-[1.6rem] my-5">
+          <h3 className="font-NetflixSansBold text-[1.6rem] mt-5 ">
             Join today. Cancel anytime.
           </h3>
 
@@ -81,17 +81,17 @@ const Login = () => {
 
       {/* Second section */}
 
-      <div className="text-white bg-black flex flex-wrap-reverse w-full justify-between items-center px-[13%] py-24 gap-2 border-gray-700 border-y-8">
-        <div className="w-1/2">
-          <h1 className="text-5xl font-NetflixSansBlack mb-8">
+      <div className="text-white bg-black flex flex-col md:flex-row w-full justify-between items-center px-[13%] py-24 gap-4 border-gray-700 border-y-8">
+        <div className="md:w-1/2 w-full">
+          <h1 className="md:text-5xl text-4xl md:text-left text-center font-NetflixSansBlack mb-8">
             Enjoy on your TV
           </h1>
-          <p className="text-2xl">
+          <p className="md:text-2xl text-lg md:text-left text-center">
             Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
             players and more.
           </p>
         </div>
-        <div className="w-96 h-80 relative overflow-hidden">
+        <div className="md:w-96 w-[350px] h-80 relative overflow-hidden">
           <img
             alt=""
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
@@ -127,7 +127,7 @@ const Login = () => {
 
       {/* Third section */}
 
-      <div className="text-white bg-black flex flex-wrap w-full justify-between items-center px-[13%] py-24 gap-4 border-gray-700 border-b-8">
+      <div className="text-white bg-black flex flex-col-reverse md:flex-row w-full justify-between items-center px-[13%] md:py-24 py-8 gap-4 border-gray-700 border-b-8">
         <div className="w-[27rem] bg-white">
           <img
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
@@ -137,10 +137,10 @@ const Login = () => {
         </div>
 
         <div className="min-w-1/2 basis-1/2">
-          <h1 className="text-5xl font-NetflixSansBlack mb-8">
+          <h1 className="md:text-5xl text-4xl md:text-left text-center font-NetflixSansBlack mb-8">
             Download your shows to watch offline
           </h1>
-          <p className="text-2xl">
+          <p className="md:text-2xl text-lg md:text-left text-center">
             Save your favourites easily and always have something to watch.
           </p>
         </div>
@@ -148,18 +148,18 @@ const Login = () => {
 
       {/* Fourth section */}
 
-      <div className="text-white bg-black flex w-full justify-between items-center px-[13%] py-24 gap-14 border-gray-700 border-b-8">
+      <div className="text-white bg-black flex flex-col md:flex-row justify-between items-center px-[13%] md:py-44 py-20 gap-14 border-gray-700 border-b-8">
         <div className="">
-          <h1 className="text-5xl font-NetflixSansBlack mb-8">
+          <h1 className="md:text-5xl text-4xl md:text-left text-center font-NetflixSansBlack mb-8">
             Watch everywhere
           </h1>
-          <p className="text-2xl">
+          <p className="md:text-2xl text-lg md:text-left text-center">
             Stream unlimited movies and TV shows on your phone, tablet, laptop,
             and TV.
           </p>
         </div>
 
-        <div className="relative w-1/2 h-64">
+        <div className="relative w-[300px] md:w-[500px] ">
           <img
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"
             className="absolute scale-125"
@@ -184,8 +184,8 @@ const Login = () => {
 
       {/* Fifth section */}
 
-      <div className="text-white bg-black flex w-full justify-between items-center px-[13%] py-24 gap-14 border-gray-700 border-b-8">
-        <div className="w-1/2 h-80 ">
+      <div className="text-white bg-black flex flex-col-reverse md:flex-row justify-between items-center px-[13%] py-24 gap-14 border-gray-700 border-b-8">
+        <div className="md:w-1/2 w-full h-80 ">
           <img
             src="https://occ-0-4875-2186.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
             className="object-cover h-96"
@@ -193,11 +193,11 @@ const Login = () => {
           />
         </div>
 
-        <div className=" w-1/2">
-          <h1 className="text-5xl font-NetflixSansBlack mb-8">
+        <div className=" md:w-1/2 w-full">
+          <h1 className="md:text-5xl text-4xl md:text-left text-center font-NetflixSansBlack mb-8">
             Create profiles for kids
           </h1>
-          <p className="text-2xl">
+          <p className="md:text-2xl text-lg md:text-left text-center">
             Send children on adventures with their favourite characters in a
             space made just for them—free with your membership.
           </p>
@@ -205,17 +205,17 @@ const Login = () => {
       </div>
       {/* Frequently Asked Section  */}
 
-      <div className="">
-        <h1 className="text-center text-white md:text-6xl text-3xl md:py-12 py-8  md:font-NetflixSansBlack font-bold">
+      <div className="md:px-[13%] px-[5%]">
+        <h1 className="text-center text-white md:text-6xl text-3xl md:py-16 py-8  md:font-NetflixSansBlack font-bold">
           Frequently Asked Questions
         </h1>
-        <ul className="flex flex-col gap-2 mx-auto w-[80%] min-w-[450px] text-white font-NetflixSansBold md:text-2xl text-xl md:mb-10 mb-5">
+        <ul className="flex flex-col gap-2 mx-auto w-full min-w-[240px] text-white font-NetflixSansBold md:text-2xl text-xl md:mb-10 mb-5">
           <li className="">
             <button
               className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
               onClick={() => handleToggle("1")}
             >
-              <h1>What is Netflix?</h1>
+              <h1 className>What is Netflix?</h1>
               <div>+</div>
             </button>
             <div
@@ -238,7 +238,7 @@ const Login = () => {
               className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
               onClick={() => handleToggle("2")}
             >
-              <h1>How much does Netflix cost?</h1>
+              <h1 className>How much does Netflix cost?</h1>
               <div>+</div>
             </button>
             <div
@@ -256,7 +256,7 @@ const Login = () => {
               className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
               onClick={() => handleToggle("3")}
             >
-              <h1>Where can I watch?</h1>
+              <h1 className>Where can I watch?</h1>
               <div>+</div>
             </button>
             <div
@@ -281,7 +281,7 @@ const Login = () => {
               className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
               onClick={() => handleToggle("4")}
             >
-              <h1>How do I cancel?</h1>
+              <h1 className>How do I cancel?</h1>
               <div>+</div>
             </button>
             <div
@@ -300,7 +300,7 @@ const Login = () => {
               className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
               onClick={() => handleToggle("5")}
             >
-              <h1>What can I watch in Netflix?</h1>
+              <h1 className>What can I watch in Netflix?</h1>
               <div>+</div>
             </button>
             <div
@@ -318,7 +318,7 @@ const Login = () => {
               className="flex flex-row justify-between w-full bg-netflixGray md:py-8 md:px-6 py-4 px-4 hover:bg-zinc-600"
               onClick={() => handleToggle("6")}
             >
-              <h1>Is Netflix good for Kids?</h1>
+              <h1 className>Is Netflix good for Kids?</h1>
               <div>+</div>
             </button>
             <div
@@ -336,9 +336,9 @@ const Login = () => {
             </div>
           </li>
         </ul>
-        <EmailForm />
-        <Footer />
       </div>
+      <EmailForm />
+      <Footer />
     </>
   );
 };
